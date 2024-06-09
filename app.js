@@ -42,7 +42,7 @@ const quizData = [
 ];
 
 // step 2: javascript initialization
-
+const quiz = document.querySelector('#quiz');
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option1, option2, option3, option4] =
   document.querySelectorAll(
@@ -51,8 +51,8 @@ const [questionElm, option1, option2, option3, option4] =
 
 const submitBtn = document.querySelector("#submit");
 
-const currentQuiz = 0;
-const score = 0;
+let currentQuiz = 0;
+let score = 0;
 
 // step 3: Load quiz function
 
@@ -67,29 +67,50 @@ const loadQuiz = () => {
 
 loadQuiz();
 
-
-
 // step 4: get selected answer function on button click
 
-
 const getSelectedOption = () => {
+  // first long way:
+  // let ans_idx;
+  // answerElm.forEach((curOpt,idx)=>{
+  //     if (curOpt.checked) {
+  //         ans_idx = idx;
+  //     }
+  // });
+  // return ans_idx;
 
-    // first long way:
-    // let ans_idx;
-    // answerElm.forEach((curOpt,idx)=>{
-    //     if (curOpt.checked) {
-    //         ans_idx = idx;
-    //     }
-    // });
-    // return ans_idx;
+  // second short way:
 
-    // second short way:
+  let answerElemenet = Array.from(answerElm);
+  return answerElemenet.findIndex((curElem) => curElem.checked);
+};
 
-    let answerElemenet = Array.from(answerElm)
-    return answerElemenet.findIndex(curElem => curElem.checked)
-}
+// deslectedAnswer function:
 
-submitBtn.addEventListener("click", ()=>{
-    const selectedOptionIdx = getSelectedOption();
-    console.log(selectedOptionIdx);
-})
+const deselectedAnswer = () => {
+  answerElm.forEach((curElem) => (curElem.checked = false));
+};
+
+submitBtn.addEventListener("click", () => {
+  const selectedOptionIdx = getSelectedOption();
+  console.log(selectedOptionIdx);
+
+  if (selectedOptionIdx === quizData[currentQuiz].correct) {
+    score = score + 1;
+  }
+
+  currentQuiz++;
+
+  if (currentQuiz < quizData.length) {
+    deselectedAnswer();
+    loadQuiz();
+  } else {
+    quiz.innerHTML = `
+    <div class="result">
+    <h2>🏆 Your Score: ${score}/${quizData.length} Correct Answers </h2>
+    <p>Congratulations on completing the quiz!  🎉</p>
+    <button class="reload-button" onclick="location.reload()">Play Again 🔄</button>
+    </div>
+    `;
+  }
+});
