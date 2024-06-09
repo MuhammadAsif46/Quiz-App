@@ -1,23 +1,46 @@
-ul {
+body {
+  background-color: #8ec5fc;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz-section {
+  background-color: #fff;
+  width: 65%;
+  /* padding: 1rem;  */
+  margin: auto;
+  border-radius: 5px;
+}
+
+.question {
+  padding: 2rem 2rem 1rem 2rem;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  border: 1px solid red;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
-  padding: 4rem 5rem;
+  gap: 1rem;
+  padding: 0rem 2rem;
 }
 
 li {
   list-style: none;
   min-width: 40%;
-  min-height: 7rem;
+  /* min-height: 5rem; */
   border-radius: 7rem;
   border: 0.2rem solid rgb(224, 224, 224);
-  padding: 0 7rem 0 3rem;
+  padding: 1.2rem 7rem 1.2rem 2rem;
   -webkit-border-radius: 5rem;
   -moz-border-radius: 5rem;
   -ms-border-radius: 5rem;
   -o-border-radius: 5rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
@@ -39,12 +62,12 @@ input[type="radio"]:checked {
 }
 
 .btn {
-  padding: 2rem 5rem;
+  padding: 2rem 2rem;
 }
 
 button {
-  padding: 0 5rem;
-  height: 5rem;
+  /* padding: 0 5rem; */
+  /* height: 5rem; */
   border-radius: 5rem;
   -webkit-border-radius: 5rem;
   -moz-border-radius: 5rem;
