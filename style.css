@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
 }
 
 .quiz-section {
@@ -21,7 +21,6 @@ body {
 
 ul {
   display: flex;
-  border: 1px solid red;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -62,12 +61,11 @@ input[type="radio"]:checked {
 }
 
 .btn {
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
 }
 
 button {
-  /* padding: 0 5rem; */
-  /* height: 5rem; */
+  padding: 0.7rem 2rem;
   border-radius: 5rem;
   -webkit-border-radius: 5rem;
   -moz-border-radius: 5rem;
@@ -76,13 +74,12 @@ button {
   background-color: #7090e7;
   border: none;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .result {
-  width: 100%;
-  height: auto;
-  padding: 5rem;
+  /* height: auto; */
+  padding: 3rem;
   background-color: #fff;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
@@ -93,14 +90,14 @@ button {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1rem;
   align-items: center;
 }
 
 .result h2 {
-  font-size: 3.4rem;
+  font-size: 2.6rem;
 }
 
 .result p {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }

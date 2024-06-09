@@ -42,8 +42,8 @@ const quizData = [
 ];
 
 // step 2: javascript initialization
-const quiz = document.querySelector('#quiz');
-const scores = document.querySelector('.score');
+const quiz = document.querySelector("#quiz");
+const scores = document.querySelector(".score");
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option1, option2, option3, option4] =
   document.querySelectorAll(
