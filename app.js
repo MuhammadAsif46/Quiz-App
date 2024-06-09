@@ -43,6 +43,7 @@ const quizData = [
 
 // step 2: javascript initialization
 const quiz = document.querySelector('#quiz');
+const scores = document.querySelector('.score');
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option1, option2, option3, option4] =
   document.querySelectorAll(
@@ -59,7 +60,7 @@ let score = 0;
 const loadQuiz = () => {
   const { question, options } = quizData[currentQuiz];
 
-  questionElm.innerHTML = question;
+  questionElm.innerHTML = `${currentQuiz + 1}: ${question}`;
   options.forEach(
     (currentElem, idx) => (window[`option_${idx + 1}`].innerText = currentElem)
   );
