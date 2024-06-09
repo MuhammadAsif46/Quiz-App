@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-    
-    <h1>hello world</h1>
+  </head>
+  <body>
+    <div class="quiz-section">
+      <div id="quiz">
+        <h2 class="question" id="question">quiz question</h2>
+        <hr />
+        <ul>
+          <li>
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="option_1">quiz options</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="option_1">quiz options</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="option_1">quiz options</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="option_1">quiz options</label>
+          </li>
+        </ul>
+        <hr />
+        <div class="btn">
+          <button type="button" id="submit">Submit</button>
+        </div>
+      </div>
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
